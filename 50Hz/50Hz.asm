@@ -31,7 +31,7 @@ start:         cli                              ; No interrupts needed
                ldi  R16, 0b00000001             ; OC0A as output
                out  DDRB, R16
                ldi  R16, 0b00111110             ; 50 Hz = 0, pullups active for unused bits 
-			   out  PORTB, R16
+               out  PORTB, R16
 
                ldi  R16, 154                    ; TOP = 154 -> ~100 Hz
                out  OCR0A, R16
