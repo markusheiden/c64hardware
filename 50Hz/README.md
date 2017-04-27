@@ -1,5 +1,4 @@
-50 Hz Generator for C64
-=======================
+# 50 Hz Generator for C64
 
 For using a C64 with DC voltage it needs a 50 Hz generator for the real time clocks.
 For a detailed german description see [C64 / Reparator / 50 Hz Umbau](https://markusheiden.de/c64/reparatur.html?start=2).
