@@ -1,7 +1,7 @@
 50 Hz Generator for C64
 =======================
 
-For using a C64 with DC voltage it needs a 50 Hz for the clocks.
+For using a C64 with DC voltage it needs a 50 Hz generator for the real time clocks.
 For a detailed german description see [C64 / Reparator / 50 Hz Umbau](https://markusheiden.de/c64/reparatur.html?start=2).
 
 ## Pin layout
@@ -19,7 +19,6 @@ ATtiny13 pins:
 ## Burning
 
 For burning the [hex file](50Hz.hex) you need to configure the fuses manually:
-Und hier die Konfiguration des Controllers (Die Fuses müssen manuell eingestellt werden!):
 * CKSEL: 0b00
 * CKDIV8: 0b0
 * BODLEVEL: 0b00
