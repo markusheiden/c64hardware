@@ -29,18 +29,19 @@ start:         cli                              ; No interrupts needed
                wdr                              ; make sure, that watch dog does not trigger
 
                ldi  R16, 0b00000001             ; OC0A as output
-			   out  DDRB, R16
+               out  DDRB, R16
                ldi  R16, 0b00111110             ; 50 Hz = 0, pullups active for unused bits 
 			   out  PORTB, R16
 
                ldi  R16, 154                    ; TOP = 154 -> ~100 Hz
-			   out  OCR0A, R16
+               out  OCR0A, R16
                ldi  R16, 0b01000011             ; WGM = 0b111 (see below), toggle OC0A, OC0B disabled
                out  TCCR0A, R16
                ldi  R16, 0b1010                 ; Prescaler for timer 0 = /8
                out  TCCR0B, R16
                ldi  R16, 0                      ; reset timer 0
-			   out  TCNT0, R16
+               out  TCNT0, R16
 
 loop:          wdr                               ; make sure, that watch dog does not trigger
                rjmp loop                         ; endless loop
+
